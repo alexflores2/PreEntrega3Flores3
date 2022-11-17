@@ -174,7 +174,7 @@ form {
 }
 
 h4 {
-	color: black;
+	color: $color_1;
 	text-align: center;
 	margin: 0;
 	font-size: 30px;
@@ -199,8 +199,8 @@ textarea {
 }
 
 .boton {
-	background: gray;
-	color: aqua;
+	background: $color_4;
+	color: $color_5;
 	padding: 20px;
 }
 
