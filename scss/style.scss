@@ -115,6 +115,7 @@ h2 {
 		display: grid;
 		grid-template-columns: repeat(1);
 		gap: 5px;
+		margin:auto;
 	}
 
 	.pie-pagina {
@@ -135,6 +136,9 @@ h2 {
 	align-items: map-get($estilos ,centro );
 	min-height: 100vh;
 	width: 100%;
+	padding-left: 20px;
+	padding-right: 20px;
+	flex-wrap: wrap;
 }
 
 .grid {
@@ -152,6 +156,8 @@ h2 {
 	box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
 	cursor: pointer;
 	transition: 0.2s;
+
+	
 
 }
 
@@ -177,6 +183,7 @@ form {
 	box-sizing: border-box;
 	margin-top: 20px;
 	border-radius: 10px;
+
 
 }
 
@@ -218,6 +225,5 @@ textarea {
 @media (max-width:480px) {
 	form {
 		width: 100%;
-
 	}
 }

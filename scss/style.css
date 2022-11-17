@@ -156,6 +156,7 @@ h2 {
     display: grid;
     grid-template-columns: repeat(1);
     gap: 5px;
+    margin: auto;
   }
   .pie-pagina .grupo-1 {
     width: 90%;
@@ -172,6 +173,9 @@ h2 {
   align-items: center;
   min-height: 100vh;
   width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  flex-wrap: wrap;
 }
 
 .grid {
