@@ -16,12 +16,12 @@ $estilos: (
 h1 {
 	font-style: italic;
 	font-size: 50px;
-	text-align: map-get($estilos ,centro );
+	text-align: map-get($estilos , centro);
 }
 
 h2 {
 	font-style: oblique;
-	text-align: map-get($estilos ,centro );
+	text-align: map-get($estilos , centro);
 }
 
 @mixin display-align-content-items {
@@ -48,66 +48,65 @@ h2 {
 		max-width: 1200px;
 		margin: auto;
 		display: grid;
-		grid-template-columns: repeat(3, 1fr
-		);
-	grid-gap: 50px;
-	padding: 45px 0px;
+		grid-template-columns: repeat(3, 1fr);
+		grid-gap: 50px;
+		padding: 45px 0px;
 
-	.box {
-		figure {
-			width: 100%;
-			height: 100%;
-			display: flex;
-			justify-content: map-get($estilos ,centro );
-			align-items: map-get($estilos ,centro );
+		.box {
+			figure {
+				width: 100%;
+				height: 100%;
+				display: flex;
+				justify-content: map-get($estilos , centro);
+				align-items: map-get($estilos , centro);
 
-			img {
-				width: 250px;
+				img {
+					width: 250px;
+				}
+			}
+
+			h2 {
+				color: $color_1;
+				margin-bottom: 25px;
+				font-size: 20px;
+			}
+
+			p {
+				color: $color_1;
+				margin-bottom: 10px;
 			}
 		}
 
-		h2 {
-			color: $color_1;
-			margin-bottom: 25px;
-			font-size: 20px;
-		}
+		.red-social {
+			a {
+				display: inline-block;
+				text-decoration: none;
+				width: 45px;
+				height: 45px;
+				line-height: 45px;
+				color: $color_1;
+				margin-right: 10px;
+				background-color: $background-color_2;
+				text-align: map-get($estilos , centro);
+				transition: all 300ms ease;
 
-		p {
-			color: $color_1;
-			margin-bottom: 10px;
-		}
-	}
-
-	.red-social {
-		a {
-			display: inline-block;
-			text-decoration: none;
-			width: 45px;
-			height: 45px;
-			line-height: 45px;
-			color: $color_1;
-			margin-right: 10px;
-			background-color: $background-color_2;
-			text-align: map-get($estilos ,centro );
-			transition: all 300ms ease;
-
-			&:hover {
-				color: $color_2;
+				&:hover {
+					color: $color_2;
+				}
 			}
 		}
 	}
-}
 
-.grupo-2 {
-	background-color: $background-color_2;
-	padding: 15px 10px;
-	text-align: map-get($estilos ,centro );
-	color: $color_1;
+	.grupo-2 {
+		background-color: $background-color_2;
+		padding: 15px 10px;
+		text-align: map-get($estilos , centro);
+		color: $color_1;
 
-	small {
-		font-size: 15px;
+		small {
+			font-size: 15px;
+		}
 	}
-}
 }
 
 @media screen and (max-width:800px) {
@@ -115,7 +114,7 @@ h2 {
 		display: grid;
 		grid-template-columns: repeat(1);
 		gap: 5px;
-		margin:auto;
+		margin: auto;
 	}
 
 	.pie-pagina {
@@ -132,8 +131,8 @@ h2 {
 	background-color: rgb(255, 255, 255);
 	font-family: "Poppins", sans-serif;
 	display: flex;
-	justify-content: map-get($estilos ,centro );
-	align-items: map-get($estilos ,centro );
+	justify-content: map-get($estilos , centro);
+	align-items: map-get($estilos , centro);
 	min-height: 100vh;
 	width: 100%;
 	padding-left: 20px;
@@ -157,7 +156,7 @@ h2 {
 	cursor: pointer;
 	transition: 0.2s;
 
-	
+
 
 }
 
@@ -221,6 +220,7 @@ textarea {
 .boton:hover {
 	cursor: pointer;
 }
+
 
 @media (max-width:480px) {
 	form {

@@ -1,5 +1,3 @@
-
-
 .card-img {
 	display: block;
 	width: 100%;
@@ -7,16 +5,17 @@
 	object-fit: cover;
 }
 
-
 .card-content {
 	padding: 3rem;
 }
+
 .card-header {
 	font-size: 3rem;
 	font-weight: 500;
 	color: $color_3;
 	margin-bottom: 1.5rem;
 }
+
 .card-text {
 	font-size: 1.6rem;
 	letter-spacing: 0.1rem;
@@ -24,6 +23,7 @@
 	color: $color_4;
 	margin-bottom: 2.5rem;
 }
+
 .card-btn {
 	display: block;
 	width: 100%;
@@ -37,27 +37,34 @@
 	transition: 0.2s;
 	cursor: pointer;
 	letter-spacing: 0.1rem;
+
 	span {
 		margin-left: 1rem;
 		transition: 0.2s;
 	}
+
 	&:hover {
 		background-color: $background-color_4;
+
 		span {
 			margin-left: 1.5rem;
 		}
 	}
+
 	&:active {
 		background-color: $background-color_4;
+
 		span {
 			margin-left: 1.5rem;
 		}
 	}
 }
+
 @media only screen and (max-width: 60em) {
 	.cuerpo {
 		padding: 3rem;
 	}
+
 	.grid {
 		grid-gap: 3rem;
 	}
