@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
-
 * {
   padding: 0;
   margin: 0;
@@ -11,7 +10,7 @@
   width: 100%;
   height: 20rem;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
 
 .card-content {
@@ -47,24 +46,19 @@
   cursor: pointer;
   letter-spacing: 0.1rem;
 }
-
 .card-btn span {
   margin-left: 1rem;
   transition: 0.2s;
 }
-
 .card-btn:hover {
   background-color: #c2cffc;
 }
-
 .card-btn:hover span {
   margin-left: 1.5rem;
 }
-
 .card-btn:active {
   background-color: #c2cffc;
 }
-
 .card-btn:active span {
   margin-left: 1.5rem;
 }
@@ -73,12 +67,10 @@
   .cuerpo {
     padding: 3rem;
   }
-
   .grid {
     grid-gap: 3rem;
   }
 }
-
 h1 {
   font-style: italic;
   font-size: 50px;
@@ -106,7 +98,6 @@ h2 {
   width: 100%;
   background-color: white;
 }
-
 .pie-pagina .grupo-1 {
   width: 100%;
   max-width: 1200px;
@@ -116,7 +107,6 @@ h2 {
   grid-gap: 50px;
   padding: 45px 0px;
 }
-
 .pie-pagina .grupo-1 .box figure {
   width: 100%;
   height: 100%;
@@ -124,22 +114,18 @@ h2 {
   justify-content: center;
   align-items: center;
 }
-
 .pie-pagina .grupo-1 .box figure img {
   width: 250px;
 }
-
 .pie-pagina .grupo-1 .box h2 {
   color: black;
   margin-bottom: 25px;
   font-size: 20px;
 }
-
 .pie-pagina .grupo-1 .box p {
   color: black;
   margin-bottom: 10px;
 }
-
 .pie-pagina .grupo-1 .red-social a {
   display: inline-block;
   text-decoration: none;
@@ -152,18 +138,15 @@ h2 {
   text-align: center;
   transition: all 300ms ease;
 }
-
 .pie-pagina .grupo-1 .red-social a:hover {
   color: aqua;
 }
-
 .pie-pagina .grupo-2 {
   background-color: white;
   padding: 15px 10px;
   text-align: center;
   color: black;
 }
-
 .pie-pagina .grupo-2 small {
   font-size: 15px;
 }
@@ -175,7 +158,6 @@ h2 {
     gap: 5px;
     margin: auto;
   }
-
   .pie-pagina .grupo-1 {
     width: 90%;
     grid-template-columns: repeat(1, 1fr);
@@ -183,7 +165,6 @@ h2 {
     padding: 35px 0px;
   }
 }
-
 .cuerpo {
   background-color: rgb(255, 255, 255);
   font-family: "Poppins", sans-serif;
@@ -274,6 +255,4 @@ textarea {
   form {
     width: 100%;
   }
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
