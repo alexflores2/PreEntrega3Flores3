@@ -1,113 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="pagina de juegos">
-    <meta name="keywords"
-        content="juegos, pc, resident evil, monkey island, valorant, games, god of war, slime rancher, top juegos, videojuego, game">
-    <title>AF Games</title>
-    <link rel="shortcut icon" href="./assests/imagenes/logo.png">
-    <link rel="stylesheet" href="./css/bootstrap-5.2.2-dist/css/bootstrap.css">
-    <link rel="stylesheet" href="./scss/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>ALEX FLORES | Resto & Bar | Menú digital</title>
 </head>
-
 <body>
+    <!-- PORTADA -->
+    <div id="front" class="position-fixed vw-100 vh-100 text-center text-white">
+        <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+            <main class="px-3 my-auto">
+                <h1>Alex F</h1>
+                <H2>Resto & Bar</H2>
+                <p class="lead">Bienvenid@</p>
+                <p class="lead">
+                <a href="#" id="show-menu-btn" class="btn btn-lg btn-light">Ver menú</a>
+                </p>
+            </main>
+        </div>
+        <!-- BOTON SETTINGS -->
+        <button id="settings-btn" type="button" class="btn btn-link position-absolute top-0 end-0 me-3 fs-5 text-white">
+            <i class="bi bi-gear"></i>
+        </button>
+    </div>
 
-    <header>
+    <!-- LOG IN -->
+    <div id="log-in-container" class="container-fluid fixed-top vw-100 vh-100 p-2 pb-5 display-none">
+        <div class="col-10 col-sm-7 col-md-6 col-lg-5 position-absolute top-50 start-50 translate-middle">
+            <form>
+                <div class="mb-3">
+                  <label for="user" class="form-label text-white">Usuario</label>
+                  <input type="text" class="form-control" id="user-input">
+                </div>
+                <div class="mb-3">
+                  <label for="pass" class="form-label text-white">Contraseña</label>
+                  <input type="password" class="form-control" id="pass-input">
+                </div>
+                <div class="mb-3 form-check">
+                  <input type="checkbox" class="form-check-input" id="remember-check">
+                  <label class="form-check-label text-white" for="remember">Recordar mis datos</label>
+                </div>
+                <button id="log-in-btn" type="button" class="btn btn-primary">Ingresar</button>
+                <button id="cancel-log-in-btn" type="button" class="btn btn-secondary ms-3">Cancelar</button>
+                <p id="rejected-message" class="text-danger mt-2 display-none">Alguno de los datos ingresados es incorrecto.</p>
+            </form>
+        </div>
+    </div>
 
-        <nav class="navbar navbar-expand-lg bg-light">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="./index.html">Inicio</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav">
-                        <a class="nav-link" href="./pages/Juegos.html">Juegos</a>
-                        <a class="nav-link" href="./pages/Juegos_top.html">Juegos Top</a>
-                        <a class="nav-link" href="./pages/Contacto.html">Contacto</a>
-                        <a class="nav-link" href="./pages/acerca_de_nosotros.html">acerca de nosotros</a>
+    <!-- SETTINGS -->
+    <div id="settings-container" class="container-fluid fixed-top vw-100 vh-100 p-2 pb-5 to-up display-none">
+        <div class="col-12 col-lg-9 m-auto">
+            <form>
+                <div class="row">
+                    <div class="col-1 mb-1 p-1">
+                        <p class="form-label text-white text-center">Tipo</p>
+                    </div>
+                    <div class="col-4 mb-1 p-1">
+                        <p class="form-label text-white text-center">Descripción</p>
+                    </div>
+                    <div class="col-1 mb-1 p-1">
+                        <p class="form-label text-white text-center">$</p>
+                    </div>
+                    <div class="col-1 mb-1 p-1">
+                        <p class="form-label text-white text-center">Disp.</p>
+                    </div>
+                    <div class="col-3 mb-1 p-1">
+                        <p class="form-label text-white text-center">Imagen</p>
+                    </div>
+                    <div class="col-2 mb-1 p-1">
+                        <p class="form-label text-white text-center"></p>
                     </div>
                 </div>
+                <div id="settings-list">
+                    <!-- ACA SE INSERTAN LOS ITEMS PARA CONFIGURAR -->
+                </div>
+                <button id="save-settings-btn" type="submit" class="btn btn-primary">Guardar</button>
+                <button id="cancel-settings-btn" type="button" class="btn btn-secondary ms-3">Cancelar</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- MENU -->
+    <div class="container-fluid bg-dark min-vh-100">
+        <nav id="nav-bar" class="navbar navbar-expand navbar-light bg-light sticky-top">
+            <div class="container-fluid">
+              <a id="home-btn" class="navbar-brand"><i class="bi bi-house-door"></i></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#headingOne">Entradas</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#headingTwo">Principales</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#headingThree">Postres</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#headingFour">Bebidas</a>
+                  </li>
+                </ul>
+              </div>
             </div>
         </nav>
-    </header>
-
-
-    <main>
-        <h1 class="wow animate__animated animate animate__backInLeft">Alex Flores Games</h1>
-        <section>
-            <h2>Los mejores juegos para gamers</h2>
-
-            
-        </section>
-        <section>
-            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="./assests/imagenes/silenthill2.jpg" class="d-block w-100" alt="silent_hill_2">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="./assests/imagenes/persona5.jpg" class="d-block w-100" alt="persona_5">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="./assests/imagenes/untcharted.jpg" class="d-block w-100" alt="Untcharted">
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item border-0">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Entradas
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="accordion-body bg-dark">
+                        <div id="row-entradas" class="row gy-3">
+                            <!-- ACA SE INSERTAN LAS CARDS -->
+                        </div>
                     </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
             </div>
-        </section>
-
-    </main>
-
-
-    <script src="./js/wow.min.js"></script>
-    <script>
-        new WOW().init();
-    </script>
-
-    <footer class="pie-pagina">
-        <div class="grupo-1">
-            <div class="box">
-                <h2>SOBRE NOSOTROS</h2>
-                <p>Somos un grupo de personas especializados en venta de juegos</p>
-                <p>Estan invitados a pasar por nuestras redes sociales!</p>
+            <div class="accordion-item border-0">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Principales
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse show" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                    <div class="accordion-body bg-dark">
+                        <div id="row-principales" class="row gy-3">
+                            <!-- ACA SE INSERTAN LAS CARDS -->
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="box">
-                <h2>SIGUENOS</h2>
-                <div class="red-social">
-                    <a href="http://www.facebook.com" class="fa fa-facebook"></a>
-                    <a href="http://www.instagram.com" class="fa fa-instagram"></a>
-                    <a href="http://www.twitter.com" class="fa fa-twitter"></a>
-                    <a href="http://www.youtube.com" class="fa fa-youtube"></a>
+            <div class="accordion-item border-0">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Postres
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse show" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                    <div class="accordion-body bg-dark">
+                        <div id="row-postres" class="row gy-3">
+                            <!-- ACA SE INSERTAN LAS CARDS -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item border-0">
+                <h2 class="accordion-header" id="headingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    Bebidas
+                    </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse show" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                    <div class="accordion-body bg-dark">
+                        <div id="row-bebidas" class="row gy-3">
+                            <!-- ACA SE INSERTAN LAS CARDS -->
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="grupo-2">
-            <small>&copy; 2022 <b>Alex Flores Games</b> - Todos los Derechos Reservados.</small>
-        </div>
-    </footer>
+    </div>
 
-    <script src="./css/bootstrap-5.2.2-dist/js/bootstrap.bundle.js"></script>
+    <!-- MENSAJE DE ITEM AGREGADO -->
+    <div id="alert" class="alert alert-success display-none" role="alert"></div>
+
+    <!-- BOTON MOSTRAR PEDIDO Y CONTADOR -->
+    <button type="button" id="show-order-btn" class="btn btn-info shadow pe-5 disabled">Ver pedido</button>
+    <span id="counter" class="badge bg-primary rounded-pill">0</span>
+
+    <!-- PEDIDO -->
+    <div id="order-container" class="to-up display-none container-fluid fixed-top vw-100 vh-100 p-2 pb-5">
+        <div class="col-sm-8 col-md-6 col-lg-5 mx-auto">
+            <ol id="order-list" class="pedido list-group list-group-numbered">
+                <!-- ACA SE INSERTAN LOS ITEMS -->
+            </ol>
+            <div id="total-cost-container" class="alert alert-info text-end" role="alert">
+                Costo total: $<span id="total-cost"></span>.-
+            </div>
+        </div>
+        <form id="form" action="https://formsubmit.co/rafafloresok@gmail.com" method="post">
+        </form>
+        <button type="button" id="send-order-btn" class="btn btn-info">Enviar pedido</button>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="script/script.js"></script>
 </body>
-
-
-
-
 </html>
