@@ -52,27 +52,4 @@ ___
     <img src="https://user-images.githubusercontent.com/87249022/200223685-46f8c79f-f00e-4458-8c6a-d34429663688.gif" ></img>
 </h1>
 
-## Getting started
-🌱 Clone the repository:
-```
-git clone https://github.com/Caracolaracol/ReactJsFinal-coderhouse.git
-```
 
-🌱 Install npm packages:
-```
- npm install
-```
-
-🌱 Run the app:
-```
-npm start
-```
-
-## Licence
-💡 Distributed under the MIT License. See LICENSE.txt for more information.
-
-## Contact 
-<a>[![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/agustin-rojas-c4r4c01/)</a>&nbsp;
-
-## Thank you
-Take Care! 💛
